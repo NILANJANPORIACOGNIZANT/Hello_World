@@ -1,9 +1,19 @@
+
+
 #include"ProcessFile.h"
 extern char sourceFileName[FILENAME_LENGTH];
 extern char targetFileName[FILENAME_LENGTH];
 extern char outputFileName[FILENAME_LENGTH];
 extern char outputSmallFileName[FILENAME_LENGTH];
 extern int smallFileRecs;
+/*changes done for checking*/
+extern char sourceFileName[FILENAME_LENGTH];
+extern char targetFileName[FILENAME_LENGTH];
+extern char outputFileName[FILENAME_LENGTH];
+extern char outputSmallFileName[FILENAME_LENGTH];
+extern int smallFileRecs;
+/*changes done for checking*/
+
 
 extern vector<std::unordered_map<string,Value> > targetHashes;
 
