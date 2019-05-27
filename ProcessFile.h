@@ -37,18 +37,6 @@ class ProcessFile
 	long mTgtFseekEnd;
 	int mThreadNbr;
 	
-	std::unordered_map<string,Value> mSourceFileMap;
-	std::unordered_map<string,Value> mTargetFileMap;
-	vector<string> diffRows;
-	FILE *DiffFilePtr;
-	
-	
-	public:
-	
-	long rowsProcessed;
-	long rowsNotMatched;
-	string diffFileName;
-	
 	ProcessFile(int _threadNbr, long _seekStart, long _seekEnd, long _TgtSeekStart, long _TgtSeekEnd)
 	{
 		mThreadNbr = _threadNbr;
@@ -88,16 +76,6 @@ class ProcessFile
 		mTargetFileMap.clear();
 	}
 	
-	vector<string> &GetDiffRows()
-	{
-		return diffRows;
-	}
-	
-	void showSize()
-	{
-		cout << "Size: \n";
-		cout << "mTargetFileMap : " << mTargetFileMap.size() << "\n"; 
-	}
 	
 	void GetTgtLine(long fseekLoc, char *);
 	
